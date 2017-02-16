@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Open Data",
+    "type": "meta",
+    "id": "data_gaps_b"
+  },
+  {
+    "name": "Household Members Details",
+    "type": "Label",
+    "id": "lbl_members",
+    "priority": "0"
+  },
+  {
+    "name": "Household ID ",
+    "type": "StringTextView",
+    "id": "household_id",
+    "default": "",
+    "priority": "1"
+  },
+  {
+    "name": "Member Number ",
+    "type": "IntegerTextView",
+    "id": "member_number",
+    "default": "",
+    "priority": "1"
+  },
+  {
+    "name": "Member Relationship to breadwinner?",
+    "type": "StringTextView",
+    "id": "member_relation",
+    "default": "",
+    "priority": "2",
+    "required": "y"
+  },
+  {
+    "name": "Member Age ",
+    "type": "IntegerTextView",
+    "id": "member_age",
+    "default": "",
+    "priority": "3"
+  },
+  {
+    "name": "Member's highest education level? ",
+    "type": "StringTextView",
+    "id": "member_education_level",
+    "default": "",
+    "priority": "4",
+    "required": "y"
+  },
+  {
+    "name": "If you have any orphans, what are their ages?",
+    "type": "Spinner",
+    "id": "member_orphan",
+    "default": "0",
+    "priority": "5",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  {
+    "name": "Member employment status? ",
+    "type": "Spinner",
+    "id": "member_employment",
+    "default": "0",
+    "priority": "6",
+    "options": {
+      "0": "",
+      "1": "Employed",
+      "2": "Unemployed"
+    }
+  },
+  {
+    "name": "Which school does the member go to?",
+    "type": "StringTextView",
+    "id": "member_school",
+    "default": "",
+    "priority": "7",
+    "required": "y"
+  },
+  {
+    "name": "Does your household have access to NSSF? ",
+    "type": "Spinner",
+    "id": "member_nssf",
+    "default": "0",
+    "priority": "8",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  {
+    "name": "Does member have access to bursaries? (Note the source e.g. CDF, Other, etc.)",
+    "type": "StringTextView",
+    "id": "member_bursary",
+    "default": "",
+    "priority": "9"
+  },
+  {
+    "name": "Does your household have access to vulnerable persons fund? ",
+    "type": "Spinner",
+    "id": "member_pension_fund",
+    "default": "0",
+    "priority": "10",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  }
+]

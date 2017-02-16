@@ -1,0 +1,618 @@
+[
+  {
+    "name": "Gender Equality",
+    "type": "meta",
+    "id": "sdg_gender"
+  },
+  {
+    "name": "SDG 5: Gender Equality",
+    "type": "Label",
+    "id": "albl_members",
+    "priority": "0"
+  },
+  {
+    "name": "Sub-location",
+    "type": "StringTextView",
+    "id": "sublocation",
+    "default": "",
+    "priority": "1"
+  },
+  {
+    "name": "Cluster",
+    "type": "StringTextView",
+    "id": "cluster",
+    "default": "",
+    "priority": "2",
+    "required": "y"
+  },
+  {
+    "name": "Age",
+    "type": "IntegerTextView",
+    "id": "age",
+    "default": "",
+    "priority": "3"
+  },
+  {
+    "name": "Gender",
+    "type": "Spinner",
+    "id": "gender",
+    "default": "",
+    "priority": "4",
+    "options": {
+      "0": "",
+      "1": "Female",
+      "2": "Male"
+    }
+  },
+  {
+    "name": "Employment Status",
+    "type": "Spinner",
+    "id": "employment",
+    "default": "",
+    "priority": "5",
+    "options": {
+      "0": "",
+      "1": "Employed",
+      "2": "Self employed",
+      "3": "Not employed"
+    }
+  },
+  {
+    "name": "Profession",
+    "type": "StringTextView",
+    "id": "profession",
+    "default": "",
+    "priority": "6"
+  },
+  {
+    "name": "1. Are you a member of any group?",
+    "type": "Spinner",
+    "id": "group_member",
+    "default": "0",
+    "priority": "7",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  {
+    "name": "a. If Yes, what is the name of the group?",
+    "type": "StringTextView",
+    "id": "group_name",
+    "default": "",
+    "priority": "8"
+  },
+  {
+    "name": "b.	Is the group for",
+    "type": "Spinner",
+    "id": "group_purpose",
+    "default": "",
+    "priority": "9",
+    "options": {
+      "0": "",
+      "1": "Investments",
+      "2": "Merry-go-round chama",
+      "3": "Welfare group"
+    }
+  },
+  {
+    "name": "c.	How much is the monthly contribution?",
+    "type": "Spinner",
+    "id": "group_contribution",
+    "default": "",
+    "priority": "10",
+    "options": {
+      "0": "",
+      "1": "Below Ksh 500",
+      "2": "Ksh 500 - Ksh 1000 ",
+      "3": "Ksh 1000 - Ksh 3000",
+      "4": "Above Ksh 3000"
+    }
+  },
+  {
+    "name": "d.	Is the group for:",
+    "type": "Spinner",
+    "id": "group_gender",
+    "default": "",
+    "priority": "11",
+    "options": {
+      "0": "",
+      "1": "Female only",
+      "2": "Male only",
+      "3": "Both male and female"
+    }
+  },
+  {
+    "name": "2(a). Do you own a mobile phone",
+    "type": "Spinner",
+    "id": "own_mobile",
+    "default": "",
+    "priority": "12",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  {
+    "name": "2(b). Do you own land",
+    "type": "Spinner",
+    "id": "own_land",
+    "default": "",
+    "priority": "13",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  {
+    "name": "3.	What is the gender of the breadwinner in your household?",
+    "type": "Spinner",
+    "id": "breadwinner_gender",
+    "default": "",
+    "priority": "14",
+    "options": {
+      "0": "",
+      "1": "Female",
+      "2": "Male"
+    }
+  },
+  {
+    "name": "4.	How much time does each of these spend on unpaid care and domestic work?",
+    "type": "Accordion",
+    "id": "lbl_spending",
+    "priority": "15",
+    "children": ["spending_husband", "spending_wife", "spending_daughters", "spending_sons", "spending_female_relative",
+      "spending_male_relative", "spending_paid_housegirl", "spending_paid_houseboy"]
+  },
+  {
+    "name": "Husband",
+    "type": "Spinner",
+    "id": "spending_husband",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Wife",
+    "type": "Spinner",
+    "id": "spending_wife",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Daughters",
+    "type": "Spinner",
+    "id": "spending_daughters",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Sons",
+    "type": "Spinner",
+    "id": "spending_sons",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Female Relative",
+    "type": "Spinner",
+    "id": "spending_female_relative",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Male Relative",
+    "type": "Spinner",
+    "id": "spending_male_relative",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Paid Housegirl",
+    "type": "Spinner",
+    "id": "spending_paid_housegirl",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "Paid Houseboy",
+    "type": "Spinner",
+    "id": "spending_paid_houseboy",
+    "default": "",
+    "priority": "16",
+    "options": {
+      "0": "",
+      "1": "Below 1 hour", "2": "1-2 hours", "3": "2-5 hours", "4": "Above 5 hours"
+    }
+  },
+  {
+    "name": "5.	Have you ever been subjected to any of the following kinds of violence?",
+    "type": "Spinner",
+    "id": "subjected_violence",
+    "default": "",
+    "priority": "17",
+    "options": {
+      "0": "",
+      "1": "Physical", "2": "Sexual", "3": "Psychological"
+    }
+  },
+  {
+    "name": "6.	Did you report the incident? ",
+    "type": "Spinner",
+    "id": "violence_reported",
+    "default": "",
+    "priority": "18",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "6(b) If yes, where did you report: ",
+    "type": "Spinner",
+    "id": "violence_reported_to",
+    "default": "",
+    "priority": "19",
+    "options": {
+      "0": "", "1": "To the police", "2": "To the chief", "3": "To the village elder", "4": "To the pastor",
+      "5": "To the family member", "6": "To a friend", "7": "Other (Specify)",
+      "hideOnClick": {
+        "0": ["violence_reported_to_other"], "1": ["violence_reported_to_other"], "2": ["violence_reported_to_other"]
+      , "3": ["violence_reported_to_other"], "4": ["violence_reported_to_other"], "5": ["violence_reported_to_other"]
+      , "6": ["violence_reported_to_other"]
+      }
+    }
+  },
+  {
+    "name": "Other",
+    "type": "StringTextView",
+    "id": "violence_reported_to_other",
+    "default": "",
+    "priority": "20"
+  },
+  {
+    "name": "7.	Was any action taken after reporting?",
+    "type": "Spinner",
+    "id": "violence_report_action",
+    "default": "",
+    "priority": "21",
+    "options": {
+      "0": "", "1": "Legal redress", "2": "Rescue from the offender", "3": "Medical assistance", "4": "Counselling",
+      "5": "Other"
+    }
+  },
+  {
+    "name": "Other action taken",
+    "type": "StringTextView",
+    "id": "violence_report_action_other",
+    "default": "",
+    "priority": "22"
+  },
+  {
+    "name": "8.	Have you ever held any leadership position?",
+    "type": "Spinner",
+    "id": "leadership_held",
+    "default": "",
+    "priority": "23",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "If yes, what type of leadership position do you or did you hold?",
+    "type": "StringTextView",
+    "id": "leadership_position",
+    "default": "",
+    "priority": "24"
+  },
+  {
+    "name": "9.	Do you think women have equal opportunities with men in leadership in your location? ",
+    "type": "Spinner",
+    "id": "women_equality",
+    "default": "",
+    "priority": "25",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "10. Which hospital is closest to where you stay? ",
+    "type": "StringTextView",
+    "id": "hospital_closest",
+    "default": "",
+    "priority": "26"
+  },
+  {
+    "name": "11. How long does it take you to get to a hospital when you are unwell?",
+    "type": "Spinner",
+    "id": "time_to_hospital",
+    "default": "",
+    "priority": "27",
+    "options": {
+      "0": "", "1": "Less than 30 minutes ", "2": "30 minutes - 1 hour", "3": "More than 1 hour"
+    }
+  },
+
+
+  {
+    "name": "12. Does your nearest hospital have these facilities in adequacy?",
+    "type": "Accordion",
+    "id": "lbl_adequate",
+    "priority": "29",
+    "children": ["adequate_doctors", "adequate_nurses", "adequate_midwives", "adequate_beds", "adequate_medicine",
+      "adequate_cleanliness", "adequate_laboratory"]
+  },
+  {
+    "name": "Doctors",
+    "type": "Spinner",
+    "id": "adequate_doctors",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Nurses",
+    "type": "Spinner",
+    "id": "adequate_nurses",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Midwives",
+    "type": "Spinner",
+    "id": "adequate_midwives",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Hospital Beds",
+    "type": "Spinner",
+    "id": "adequate_beds",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Medicine",
+    "type": "Spinner",
+    "id": "adequate_medicine",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Cleanliness",
+    "type": "Spinner",
+    "id": "adequate_cleanliness",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Doctors",
+    "type": "Spinner",
+    "id": "adequate_doctors",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "Laboratory Services",
+    "type": "Spinner",
+    "id": "adequate_laboratory",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "13. What would you like to see improved in your hospitals?",
+    "type": "Spinner",
+    "id": "hospital_improvement",
+    "default": "",
+    "priority": "31",
+    "options": {
+      "0": "", "1": "Number of Doctors", "2": "Number of Nurses", "3": "Number of Midwives ", "4": "Laboratory Services",
+      "5": "Service Delivery", "6": "Number of Hospital Beds", "7": "Availability of Medicine"
+    }
+  }
+,
+  {
+    "name": "14.	Have all the births in your household been delivered by a skilled health personnel?",
+    "type": "Spinner",
+    "id": "skilled_delivery",
+    "default": "",
+    "priority": "32",
+    "options": {
+      "0": "All", "1": "Some", "2": "None"
+    }
+  },
+  {
+    "name": "14 a.	If all or some, where was the delivery done?",
+    "type": "Spinner",
+    "id": "skilled_delivery_location",
+    "default": "",
+    "priority": "33",
+    "options": {
+      "0": "", "1": "At a public hospital", "2": "At a private hospital", "3": "At home by a midwife"
+    }
+  },
+  {
+    "name": "14 b.	Has your household experienced death of a child below 5 years?",
+    "type": "Spinner",
+    "id": "child_death",
+    "default": "",
+    "priority": "34",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "14 c.	If yes, what was the cause of death? ",
+    "type": "StringTextView",
+    "id": "child_death_cause",
+    "default": "",
+    "priority": "35",
+    "required": "y"
+  },
+  {
+    "name": "15. Do you use any method of family planning?",
+    "type": "Spinner",
+    "id": "family_planning",
+    "default": "",
+    "priority": "36",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "15 a.	If yes, which one?",
+    "type": "Spinner",
+    "id": "family_planning_method",
+    "default": "",
+    "priority": "37",
+    "options": {
+      "0": "", "1": "Daily Pill", "2": "IUD", "3": "Patch", "4": "other"
+    }
+  },
+  {
+    "name": "15 a.	Other method of family planning ",
+    "type": "StringTextView",
+    "id": "family_planning_method_other",
+    "default": "",
+    "priority": "38"
+  },
+  {
+    "name": "15 b.	If no, please give a reason as to why you do not use family planning ",
+    "type": "StringTextView",
+    "id": "family_planning_method_other",
+    "default": "",
+    "priority": "39"
+  },
+  {
+    "name": "16. Is your spouse supportive of your family planning preference? ",
+    "type": "Spinner",
+    "id": "family_planning_spouse_support",
+    "default": "",
+    "priority": "40",
+    "options": {
+      "0": "", "1": "Yes", "2": "No", "3": "Spouse does not know"
+    }
+  },
+  {
+    "name": "17. How often does/did your spouse accompany you to antenatal and postnatal clinics?",
+    "type": "Spinner",
+    "id": "family_planning_spouse_support",
+    "default": "",
+    "priority": "41",
+    "options": {
+      "0": "", "1": "Everytime", "2": "Sometimes", "3": "Never"
+    }
+  },
+  {
+    "name": "18. Does your household have access to clean water for domestic purposes such as washing clothes, dishes and the house?",
+    "type": "Spinner",
+    "id": "water_access",
+    "default": "",
+    "priority": "42",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "19. Do you think that there is enough security in your area? ",
+    "type": "Spinner",
+    "id": "security_enough",
+    "default": "",
+    "priority": "43",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "19 b. If no, what do you suggest to be changed?",
+    "type": "StringTextView",
+    "id": "security_suggestion",
+    "default": "",
+    "priority": "44"
+  },
+  {
+    "name": "20. Are you married? ",
+    "type": "Spinner",
+    "id": "married",
+    "default": "",
+    "priority": "45",
+    "options": {
+      "0": "", "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "20 b. If yes, at what age did you get married? ",
+    "type": "IntegerTextView",
+    "id": "married_age",
+    "default": "",
+    "priority": "46"
+  }
+,
+  {
+    "name": "21.	What are the top 3 things you want the government to deliver for you?",
+    "type": "Accordion",
+    "id": "lbl_gov_deliver",
+    "priority": "47",
+    "children": ["gov_deliver_a", "gov_deliver_b", "gov_deliver_c"]
+  },
+  {
+    "name": "",
+    "type": "StringTextView",
+    "id": "gov_deliver_a",
+    "default": "",
+    "priority": "48",
+    "hint": "a"
+  },
+  {
+    "name": "",
+    "type": "StringTextView",
+    "id": "gov_deliver_b",
+    "default": "",
+    "priority": "49",
+    "hint": "b"
+  },
+  {
+    "name": "",
+    "type": "StringTextView",
+    "id": "gov_deliver_c",
+    "default": "",
+    "priority": "50",
+    "hint": "c"
+  }
+]

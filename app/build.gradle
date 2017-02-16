@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    /*signingConfigs {
+        config {
+            storeFile file('C:/Android/_keystore/opendata_v2.jks')
+        }
+    }*/
+    compileSdkVersion 25
+    //compileSdkVersion 19
+    buildToolsVersion "25.0.0"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.ujuziweb.mydynamicform"
+        minSdkVersion 11
+        targetSdkVersion 11
+        versionCode 1
+        versionName "1.0"
+        versionNameSuffix '2'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //testCompile 'junit:junit:4.12'
+    //compile 'com.android.support:support-v4:23.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.loopj.android:android-async-http:1.4.5'
+    //compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    //compile 'com.android.support:design:23.1.0'
+    compile 'com.android.support:design:25.1.0'
+    //compile files('libs/volley.jar')
+}
+

@@ -1,0 +1,578 @@
+[
+  {
+    "name": "Gender Equality",
+    "type": "meta",
+    "id": "sdg_gender"
+  },
+  {
+    "name": "SDG 5: Gender Equality",
+    "type": "Label",
+    "id": "sdg_gender_title",
+    "priority": "0"
+  },
+  {
+    "name": "Sub-location",
+    "type": "StringTextView",
+    "id": "sublocation",
+    "default": "",
+    "priority": "1"
+  },
+  {
+    "name": "Cluster",
+    "type": "StringTextView",
+    "id": "cluster",
+    "default": "",
+    "priority": "2",
+    "required": "y"
+  },
+  {
+    "name": "Age",
+    "type": "IntegerTextView",
+    "id": "age",
+    "default": "",
+    "priority": "3"
+  },
+  {
+    "name": "Gender",
+    "type": "Spinner",
+    "id": "gender",
+    "default": "",
+    "priority": "4",
+    "options": {
+      "0": "",
+      "1": "Female",
+      "2": "Male"
+    }
+  },
+  {
+    "name": "Profession",
+    "type": "StringTextView",
+    "id": "profession",
+    "default": "",
+    "priority": "4"
+  },
+  {
+    "name": "Employment Status",
+    "type": "Spinner",
+    "id": "employment",
+    "default": "",
+    "priority": "5",
+    "options": {
+      "0": "",
+      "1": "Employed",
+      "2": "Self employed",
+      "3": "Not employed"
+    }
+  },
+  {
+    "name": "Highest Education Level",
+    "type": "Spinner",
+    "id": "employment",
+    "default": "",
+    "priority": "5",
+    "options": {
+      "0": "", "1": "Primary", "2": "Secondary", "3": "College", "4": "University"
+    }
+  },
+  {
+    "name": "1. Are you a member of any group?",
+    "type": "Spinner",
+    "id": "group_member",
+    "default": "0",
+    "priority": "7",
+    "options": {
+      "0": "",
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  {
+    "name": "a. If Yes, how many groups?",
+    "type": "IntegerTextView",
+    "id": "group_number",
+    "default": "",
+    "priority": "8"
+  },
+  {
+    "name": "b. What is the name of the group?",
+    "type": "StringTextView",
+    "id": "group_name",
+    "default": "",
+    "priority": "9"
+  },
+  {
+    "name": "c.	What is the purpose of the group?",
+    "type": "Spinner",
+    "id": "group_purpose",
+    "default": "",
+    "priority": "10",
+    "options": {
+      "0": "",
+      "1": "Investments",
+      "2": "Merry-go-round chama",
+      "3": "Welfare group"
+    }
+  },
+  {
+    "name": "e.	How much is the monthly contribution?",
+    "type": "Spinner",
+    "id": "group_contribution",
+    "default": "",
+    "priority": "11",
+    "options": {
+      "0": "",
+      "1": "Below Ksh 200",
+      "2": "Ksh 200 - Ksh 500 ",
+      "3": "Ksh 500 - Ksh 1000",
+      "4": "Above Ksh 1000"
+    }
+  },
+  {
+    "name": "d.	What is the group composition?",
+    "type": "Spinner",
+    "id": "group_gender",
+    "default": "",
+    "priority": "11",
+    "options": {
+      "0": "",
+      "1": "Female only",
+      "2": "Male only",
+      "3": "Both male and female"
+    }
+  },
+  {
+    "name": "2.	Have you ever been subjected to any kind of physical, sexual or psychological violence?",
+    "type": "Spinner",
+    "id": "violence_subject",
+    "default": "",
+    "priority": "12",
+    "options": { "0": "", "1": "Yes", "2": "No", "3": "Not willing to answer" },
+    "hideOnClick": {
+      "0": ["violence_accordion"], "2": ["violence_accordion"], "3": ["violence_accordion"]
+    }
+  },
+  {
+    "name": "If yes, kindly provide the exact details below: (where appropriate)",
+    "type": "Accordion",
+    "id": "violence_accordion",
+    "priority": "13",
+    "children": ["violence_physical_slapped", "violence_physical_slapped_by",
+      "violence_physical_whipped", "violence_physical_whipped_by",
+      "violence_physical_roughed", "violence_physical_roughed_by",
+      "violence_physical_threatened", "violence_physical_threatened_by",
+      "violence_physical_FGM", "violence_physical_FGM_by",
+      "violence_physical_other", "violence_physical_other_by",
+      "violence_sexual_rape", "violence_sexual_rape_by",
+      "violence_sexual_grope", "violence_sexual_grope_by",
+      "violence_psych_emotion", "violence_psych_emotion_by",
+      "violence_psych_verbal", "violence_psych_verbal_by"]
+  },
+  {
+    "name": "Slapped",
+    "type": "Spinner",
+    "id": "violence_physical_slapped",
+    "default": "",
+    "priority": "14",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Slapped By",
+    "type": "Spinner",
+    "id": "violence_physical_slapped_by",
+    "default": "",
+    "priority": "14",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Whipped",
+    "type": "Spinner",
+    "id": "violence_physical_whipped",
+    "default": "",
+    "priority": "15",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Whipped By",
+    "type": "Spinner",
+    "id": "violence_physical_whipped_by",
+    "default": "",
+    "priority": "15",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Roughed Up",
+    "type": "Spinner",
+    "id": "violence_physical_roughed",
+    "default": "",
+    "priority": "16",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Roughed Up By",
+    "type": "Spinner",
+    "id": "violence_physical_roughed_by",
+    "default": "",
+    "priority": "16",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Physically threatened",
+    "type": "Spinner",
+    "id": "violence_physical_threatened",
+    "default": "",
+    "priority": "16",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Physically threatened By",
+    "type": "Spinner",
+    "id": "violence_physical_threatened_by",
+    "default": "",
+    "priority": "16",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "FGM",
+    "type": "Spinner",
+    "id": "violence_physical_FGM",
+    "default": "",
+    "priority": "17",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "FGM By",
+    "type": "Spinner",
+    "id": "violence_physical_FGM_by",
+    "default": "",
+    "priority": "17",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Other Assault",
+    "type": "StringTextView",
+    "id": "violence_physical_other",
+    "default": "",
+    "priority": "18"
+  },
+  {
+    "name": "Other Assault By",
+    "type": "Spinner",
+    "id": "violence_physical_other_by",
+    "default": "",
+    "priority": "18",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Rape",
+    "type": "Spinner",
+    "id": "violence_sexual_rape",
+    "default": "",
+    "priority": "19",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Rape By",
+    "type": "Spinner",
+    "id": "violence_sexual_rape_by",
+    "default": "",
+    "priority": "19",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Groping",
+    "type": "Spinner",
+    "id": "violence_sexual_grope",
+    "default": "",
+    "priority": "20",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Groping By",
+    "type": "Spinner",
+    "id": "violence_sexual_grope_by",
+    "default": "",
+    "priority": "20",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Emotional",
+    "type": "Spinner",
+    "id": "violence_psych_emotion",
+    "default": "",
+    "priority": "21",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Emotional By",
+    "type": "Spinner",
+    "id": "violence_psych_emotion_by",
+    "default": "",
+    "priority": "21",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "Verbal",
+    "type": "Spinner",
+    "id": "violence_psych_verbal",
+    "default": "",
+    "priority": "22",
+    "options": { "0": "", "1": "Daily", "2": "Once a week", "3": "Once a month", "4": "Less than once a month" }
+  },
+  {
+    "name": "Verbal By",
+    "type": "Spinner",
+    "id": "violence_psych_verbal_by",
+    "default": "",
+    "priority": "22",
+    "options": { "0": "", "1": "Spouse", "2": "Relative", "3": "Friend", "4": "Stranger" }
+  },
+  {
+    "name": "3.	Did you report the incident? ",
+    "type": "Spinner",
+    "id": "violence_report",
+    "default": "",
+    "priority": "23",
+    "options": {"0": "", "1": "Yes", "2": "No" }
+  },
+  {
+    "name": "3(a). If yes, where did you report? ",
+    "type": "Spinner",
+    "id": "violence_report_to",
+    "default": "",
+    "priority": "24",
+    "options": {
+      "0": "", "1": "Police", "2": "Chief", "3": "Village elder", "4": "Pastor",
+      "5": "Family member", "6": "Parents", "7": "In-laws", "8": "Friend", "9": "To the hospital to get medical assistance",
+      "10": "Organization (Specify)", "11": "Other (Specify)" },
+    "hideOnClick": {
+        "0": ["violence_report_to_other"], "1": ["violence_report_to_other"], "2": ["violence_report_to_other"], "3": ["violence_report_to_other"], "4": ["violence_report_to_other"], "5": ["violence_report_to_other"], "6": ["violence_report_to_other"], "7": ["violence_report_to_other"],
+        "8": ["violence_report_to_other"], "9": ["violence_report_to_other"]
+      }
+  },
+  {
+    "name": "3(a).Specify Other (Organization/other)",
+    "type": "StringTextView",
+    "id": "violence_report_to_other",
+    "default": "",
+    "priority": "25"
+  },
+  {
+    "name": "3(b). If No, why? ",
+    "type": "Spinner",
+    "id": "violence_report_none",
+    "default": "",
+    "priority": "26",
+    "options": {
+      "0": "", "1": "The offence is culturally accepted ", "2": "I was afraid ", "3": "It was a one-time incident", "4": "It was my fault",
+      "5": "Other (Specify)" },
+    "hideOnClick": {
+        "0": ["violence_report_none_other"], "1": ["violence_report_none_other"], "2": ["violence_report_none_other"], "3": ["violence_report_none_other"], "4": ["violence_report_none_other"]
+      }
+  },
+  {
+    "name": "3(a).Specify Other (Organization/other)",
+    "type": "StringTextView",
+    "id": "violence_report_none_other",
+    "default": "",
+    "priority": "27"
+  },
+
+  {
+    "name": "4.	Was any action taken after reporting?",
+    "type": "Spinner",
+    "id": "violence_report_action",
+    "default": "",
+    "priority": "28",
+    "options": {
+      "0": "", "1": "Legal action", "2": "Rescue from the offender", "3": "Medical assistance", "4": "Counselling",
+      "5": "None", "6": "Other" },
+    "hideOnClick": {
+      "0": ["violence_report_action_other"], "1": ["violence_report_action_other"], "2": ["violence_report_action_other"],
+      "3": ["violence_report_action_other"], "4": ["violence_report_action_other"], "5": ["violence_report_action_other"]
+    }
+  },
+  {
+    "name": "Other action taken",
+    "type": "StringTextView",
+    "id": "violence_report_action_other",
+    "default": "",
+    "priority": "29"
+  },
+  {
+    "name": "5.	Have you ever held any leadership position?",
+    "type": "Spinner",
+    "id": "leadership_held",
+    "default": "",
+    "priority": "30",
+    "options": { "0": "", "1": "Yes", "2": "No" },
+    "hideOnClick": { "0": ["leadership_position"], "2": ["leadership_position"] }
+  },
+  {
+    "name": "If yes, what type of leadership position do you or did you hold?",
+    "type": "StringTextView",
+    "id": "leadership_position",
+    "default": "",
+    "priority": "31"
+  },
+  {
+    "name": "6.	Do you think women have equal opportunities with men in leadership in your location? ",
+    "type": "Spinner",
+    "id": "women_equality",
+    "default": "",
+    "priority": "32",
+    "options": { "0": "", "1": "Yes", "2": "No" }
+  },
+  {
+    "name": "7.	Have all the births in your household been delivered by a skilled health personnel?",
+    "type": "Spinner",
+    "id": "skilled_delivery",
+    "default": "",
+    "priority": "33",
+    "options": { "0": "All", "1": "Some", "2": "None" }
+  },
+  {
+    "name": "7(a). If all or some, where was the delivery done?",
+    "type": "Spinner",
+    "id": "skilled_delivery_location",
+    "default": "",
+    "priority": "34",
+    "options": {"0": "", "1": "At a public hospital", "2": "At a private hospital", "3": "At home by a midwife"}
+  },
+  {
+    "name": "7(b). Has your household experienced death of a child below 5 years?",
+    "type": "Spinner",
+    "id": "child_death",
+    "default": "",
+    "priority": "35",
+    "options": { "0": "", "1": "Yes", "2": "No"}
+  },
+  {
+    "name": "7(c). If yes, what was the cause of death? ",
+    "type": "StringTextView",
+    "id": "child_death_cause",
+    "default": "",
+    "priority": "36",
+    "required": "y"
+  },
+
+  {
+    "name": "8. Do you use any method of family planning?",
+    "type": "Spinner",
+    "id": "family_planning",
+    "default": "",
+    "priority": "37",
+    "options": { "0": "", "1": "Yes", "2": "No" }
+  },
+  {
+    "name": "8(a). If yes, which one?",
+    "type": "Spinner",
+    "id": "family_planning_method",
+    "default": "",
+    "priority": "38",
+    "options": { "0": "", "1": "Daily Pill", "2": "IUD", "3": "Patch", "4": "Condom", "5": "Cycle tracking", "6": "other" }
+  },
+  {
+    "name": "8(a).	Other method of family planning ",
+    "type": "StringTextView",
+    "id": "family_planning_method_other",
+    "default": "",
+    "priority": "39"
+  },
+  {
+    "name": "8(b).	If no, please give a reason as to why you do not use family planning ",
+    "type": "StringTextView",
+    "id": "family_planning_method_other",
+    "default": "",
+    "priority": "40"
+  },
+
+  {
+    "name": "9. Is your spouse supportive of your family planning preference? ",
+    "type": "Spinner",
+    "id": "family_planning_spouse_support",
+    "default": "",
+    "priority": "41",
+    "options": { "0": "", "1": "Yes", "2": "No", "3": "Spouse does not know" }
+  },
+  {
+    "name": "10. Is your spouse supportive of your antenatal and postnatal care? ",
+    "type": "Spinner",
+    "id": "family_planning_care_support",
+    "default": "",
+    "priority": "42",
+    "options": { "0": "", "1": "Yes", "2": "No" },
+    "hideOnClick": { "0": ["family_planning_care_support_type"], "2": ["family_planning_care_support_type"] }
+  },
+  {
+    "name": "10(b). If yes, how did they support? ",
+    "type": "Spinner",
+    "id": "family_planning_care_support_type",
+    "default": "",
+    "priority": "43",
+    "options": { "0": "", "1": "Accompany you to medical visits", "2": "Economic support " }
+  },
+
+  {
+    "name": "11. Do you think that there is enough security in your area? ",
+    "type": "Spinner",
+    "id": "security_enough",
+    "default": "",
+    "priority": "44",
+    "options": { "0": "", "1": "Yes", "2": "No" },
+    "hideOnClick": { "0": ["security_suggestion"], "1": ["security_suggestion"] }
+  },
+  {
+    "name": "11(b). If no, what do you suggest to be changed?",
+    "type": "StringTextView",
+    "id": "security_suggestion",
+    "default": "",
+    "priority": "45"
+  },
+  {
+    "name": "12. Are you married? ",
+    "type": "Spinner",
+    "id": "married",
+    "default": "",
+    "priority": "46",
+    "options": { "0": "", "1": "Yes", "2": "No" },
+    "hideOnClick": { "0": ["married_age"], "2": ["married_age"] }
+  },
+  {
+    "name": "12(b). If yes, at what age did you get married? ",
+    "type": "IntegerTextView",
+    "id": "married_age",
+    "default": "",
+    "priority": "47"
+  },
+  {
+    "name": "13. What are the top 3 things you want the government to deliver for you?",
+    "type": "Label",
+    "id": "lbl_gov_deliver",
+    "priority": "48",
+    "children": ["gov_deliver_a", "gov_deliver_b", "gov_deliver_c"]
+  },
+  {
+    "name": "",
+    "type": "StringTextView",
+    "id": "gov_deliver_a",
+    "default": "",
+    "priority": "49",
+    "hint": "1."
+  },
+  {
+    "name": "",
+    "type": "StringTextView",
+    "id": "gov_deliver_b",
+    "default": "",
+    "priority": "50",
+    "hint": "2."
+  },
+  {
+    "name": "",
+    "type": "StringTextView",
+    "id": "gov_deliver_c",
+    "default": "",
+    "priority": "51",
+    "hint": "3."
+  }
+]

@@ -1,0 +1,169 @@
+[
+  {
+    "name": "Open Data",
+    "type": "meta",
+    "id": "data_gaps_a"
+  },
+  {
+    "name": "Household Details",
+    "type": "Label",
+    "id": "albl_members",
+    "priority": "0"
+  },
+  {
+    "name": "Household ID ",
+    "type": "StringTextView",
+    "id": "household_id",
+    "default": "",
+    "priority": "1"
+  },
+  {
+    "name": "Call Time",
+    "type": "StringTextView",
+    "id": "call_time",
+    "default": "",
+    "priority": "1",
+    "required": "y"
+  },
+  {
+    "name": "Who owns the land that you live in?",
+    "type": "Spinner",
+    "id": "land_owner",
+    "default": "0",
+    "priority": "2",
+    "options": {
+      "0": "",
+      "1": "Father",
+      "2": "Mother",
+      "3": "Grand Father",
+      "4": "Grand Mother",
+      "5": "Landlord",
+      "6": "Other"
+    },
+    "hideOnClick": {
+      "0": ["land_owner_other"],
+      "1": ["land_owner_other"],
+      "2": ["land_owner_other"],
+      "3": ["land_owner_other"],
+      "4": ["land_owner_other"],
+      "5": ["land_owner_other"]
+    }
+  },
+  {
+    "name": "Specify other owner",
+    "type": "StringTextView",
+    "id": "land_owner_other",
+    "default": "",
+    "priority": "3"
+  },
+  {
+    "name": "If you practice farming, do you do it for commercial purposes or domestic purposes? ",
+    "type": "Spinner",
+    "id": "farming_type",
+    "default": "",
+    "priority": "4",
+    "options": {
+      "0": "",
+      "1": "Commercial",
+      "2": "Domestic"
+    }
+  },
+  {
+    "name": "How much do you spend on average on food, rent and school fees per month?",
+    "type": "Accordion",
+    "id": "lbl_spending",
+    "priority": "5",
+    "children": ["spending_food", "spending_rent", "spending_school", "spending_health"]
+  },
+  {
+    "name": "Food",
+    "type": "Spinner",
+    "id": "spending_food",
+    "default": "",
+    "priority": "6",
+    "options": {
+      "0": "",
+      "1": "Below 5000", "2": "5,000 - 10,000", "3": "10,000 - 20,000",
+      "4": "20,000 - 30,000", "5": "30,000 - 40,000", "6": "Above 40,000"
+    }
+  },
+  {
+    "name": "Rent",
+    "type": "Spinner",
+    "id": "spending_rent",
+    "default": "",
+    "priority": "7",
+    "options": {
+      "0": "",
+      "1": "Below 5000", "2": "5,000 - 10,000", "3": "10,000 - 20,000",
+      "4": "20,000 - 30,000", "5": "30,000 - 40,000", "6": "Above 40,000"
+    }
+  },
+  {
+    "name": "School",
+    "type": "Spinner",
+    "id": "spending_school",
+    "default": "",
+    "priority": "8",
+    "options": {
+      "0": "",
+      "1": "Below 5000", "2": "5,000 - 10,000", "3": "10,000 - 20,000",
+      "4": "20,000 - 30,000", "5": "30,000 - 40,000", "6": "Above 40,000"
+    }
+  },
+  {
+    "name": "Health",
+    "type": "Spinner",
+    "id": "spending_health",
+    "default": "",
+    "priority": "9",
+    "options": {
+      "0": "",
+      "1": "Below 5000", "2": "5,000 - 10,000", "3": "10,000 - 20,000",
+      "4": "20,000 - 30,000", "5": "30,000 - 40,000", "6": "Above 40,000"
+    }
+  },
+  {
+    "name": "Do you have access to NHIF?",
+    "type": "Spinner",
+    "id": "nhif_access",
+    "default": "",
+    "priority": "10",
+    "options": {
+      "0": "",
+      "1": "Yes", "2": "No"
+    }
+  },
+  {
+    "name": "What is the nearest hospital to your home?",
+    "type": "StringTextView",
+    "id": "nearest_hospital",
+    "default": "",
+    "priority": "11",
+    "required": "y"
+  },
+  {
+    "name": "Which is the most frequented hospital by your household?",
+    "type": "StringTextView",
+    "id": "frequented_hospital",
+    "default": "",
+    "priority": "12",
+    "required": "y"
+  },
+  {
+    "name": "If school going household members have been absent from school in the past 6 months, what were the reasons for being absent?  ",
+    "type": "StringTextView",
+    "id": "absent_reason",
+    "default": "",
+    "priority": "13",
+    "required": "y"
+  },
+  {
+    "name": "Household Members",
+    "type": "Subform",
+    "id": "subform_dependant",
+    "default": "Add Household Members",
+    "priority": "14",
+    "source": "data_gaps_page1.json"
+  }
+]

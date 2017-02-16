@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      tools:context="com.ujuziweb.mydynamicform.MainActivity">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+
+    <!-- Settings, should always be in the overflow -->
+    <!--<item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          app:showAsAction="never"/>-->
+
+    <item android:id="@+id/action_update"
+          android:title="@string/action_update"
+          app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_exit"  app:showAsAction="never" android:title="@string/action_exit">
+    </item>
+
+</menu>
