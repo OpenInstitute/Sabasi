@@ -1,5 +1,5 @@
 # Sabasi
-Sabasi is a swahili word meaning "Dissension". Sabasi is an Android app for filling out forms.  It is designed to be used in resource-constrained environments with challenges such as unreliable connectivity or power infrastructure. One of the main features is the ability for the user to connect to a server of their choice and have the data stored and retrieved without need of third party access, giving the user full control of the whole process. It is a free and open-source tool which help organizations author, field, and manage mobile data collection solutions. 
+Sabasi is a swahili word meaning "Gossip". Sabasi is an Android app for filling out forms.  It is designed to be used in resource-constrained environments with challenges such as unreliable connectivity or power infrastructure. One of the main features is the ability for the user to connect to a server of their choice and have the data stored and retrieved without need of third party access, giving the user full control of the whole process. It is a free and open-source tool which help organizations author, field, and manage mobile data collection solutions. 
 
 Sabasi will have a web interface with similar features, but includes a dashboard and download features. It will allow multiple users with different security rights.
 
